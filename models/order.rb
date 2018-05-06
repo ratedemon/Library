@@ -1,12 +1,9 @@
 require 'time'
 
 class Order
-  attr_writer :book, :reader
-  attr_reader :date
+  attr_accessor :id, :book, :reader, :date
 
-  def initialize(book, reader, date)
-    @book = book
-    @reader = reader
-    @date = Time.now
+  def initialize(data)
+    @id, @book, @reader, @date = data
   end
 end

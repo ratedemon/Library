@@ -1,8 +1,9 @@
 class Author
-  attr_accessor :name, :biography
+  attr_accessor :id, :name, :biography
 
-  def initialize(name, biography)
-    @name = name
-    @biography = biography
+  def initialize(data)
+    @id = data[0].to_i
+    @name = data[1]
+    @biography = data[2]
   end
 end
